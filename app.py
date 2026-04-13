@@ -11,8 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # 🔹 Cargar modelo
-model = load_model("sunlit_model.h5")
-
+model = load_model("sunlit_model_fixed.h5")
 # 🔹 Clases (AJUSTA ESTO A TU MODELO REAL)
 classes = [
     'Pepper__bell___Bacterial_spot',
