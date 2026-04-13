@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
+import os
 import requests
 from flask_cors import CORS
 from collections import Counter
@@ -177,5 +178,6 @@ def home():
     return "API funcionando correctamente"
 
 # 🔹 Run local
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
